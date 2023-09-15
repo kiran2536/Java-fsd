@@ -1,0 +1,18 @@
+public class TypeCastingExample {
+    public static void main(String[] args) {
+        // Implicit Casting (Widening)
+        int intValue = 100;
+        double doubleValue = intValue; // Implicitly cast int to double
+        System.out.println("Implicit Casting: int to double - " + doubleValue);
+
+        // Explicit Casting (Narrowing)
+        double doubleVal = 123.456;
+        int intVal = (int) doubleVal; // Explicitly cast double to int
+        System.out.println("Explicit Casting: double to int - " + intVal);
+
+        // Be cautious with explicit casting as it may lead to data loss
+        double largeDouble = 98765432.123456789;
+        int truncatedInt = (int) largeDouble; // Fractional part is truncated
+        System.out.println("Explicit Casting with Data Loss: double to int - " + truncatedInt);
+    }
+}
